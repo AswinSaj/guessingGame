@@ -14,14 +14,17 @@ function checkGuess() {
     message.style.color = "green";
   } else if (guess > secretNumber) {
     message.innerHTML = "Your guess is high";
+    message.style.color = "red";
   } else if (guess < secretNumber) {
     message.innerHTML = "Your guess is low";
+    message.style.color = "red";
   }
 }
 
 //function runs as user clicks reset
 function resetGame() {
-  secretNumber = Math.floor(Math.random() * 10 + 1);
+  let secretNumber = Math.floor(Math.random() * 10 + 1);
+  console.log(secretNumber);
   userInput.value = "";
   message.innerHTML = "";
 }
