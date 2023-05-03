@@ -1,5 +1,5 @@
 //stores random number
-let secretNumber = Math.floor(Math.random() * 10 + 1);
+var secretNumber = Math.floor(Math.random() * 10 + 1);
 console.log(secretNumber);
 
 let userInput = document.getElementById("input");
@@ -23,7 +23,7 @@ function checkGuess() {
 
 //function runs as user clicks reset
 function resetGame() {
-  let secretNumber = Math.floor(Math.random() * 10 + 1);
+  secretNumber = Math.floor(Math.random() * 10 + 1);
   console.log(secretNumber);
   userInput.value = "";
   message.innerHTML = "";
